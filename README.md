@@ -194,6 +194,35 @@ Choose the format that best demonstrates your approach.
 
 ---
 
+### 3.5 (Bonus) Real-Time Architecture Design
+
+This task is **optional** but encouraged if you have time.
+
+Imagine this survey pipeline needs to evolve: instead of batch-processing CSV files, the system must handle **~1,000 survey submissions per minute** in near real-time, with results available for analytics within seconds of submission.
+
+**Your task:**
+
+Create a simple architecture diagram (can be ASCII, a sketch, or any diagramming tool) showing how you would design this real-time pipeline. Include a brief explanation of your choices.
+
+**Consider including:**
+
+- How surveys are ingested (API, message queue, etc.)
+- Stream processing or micro-batch approach
+- Where validation and cleaning happen
+- How data lands in the analytics layer
+- How you'd handle failures or late-arriving data
+
+**We're looking for:**
+
+- Reasonable technology choices with brief justification
+- Understanding of trade-offs (latency vs. throughput, complexity vs. reliability)
+- Awareness of where the batch approach you built would need to change
+
+This doesn't need to be production-ready — a clear diagram with 3–5 sentences explaining your reasoning is enough. Place this in your `design_notes.md` or as a separate file (e.g., `realtime_architecture.md`).
+
+
+---
+
 ## 4. Design Notes / Documentation
 
 Please include a small design/notes document, e.g. `design_notes.md`.
