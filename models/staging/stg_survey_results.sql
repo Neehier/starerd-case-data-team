@@ -9,9 +9,9 @@ deduped AS (
 cleaned AS (
     SELECT
         submission_id,
-        {{ clean_email('user_email') }}             AS user_email,
+        {{ clean_email('user_email') }} AS user_email,
         TRY_CAST(rating AS INTEGER) AS rating,
-        TRY_CAST(timestamp AS TIMESTAMP) AS timestamp,
+        TRY_CAST("timestamp" AS TIMESTAMP) AS submitted_at,
         comment_text,
         region
     FROM deduped
@@ -22,4 +22,4 @@ FROM cleaned
 WHERE
     user_email IS NOT NULL
     AND rating BETWEEN 1 AND 5
-    AND timestamp IS NOT NULL
+    AND submitted_at IS NOT NULL

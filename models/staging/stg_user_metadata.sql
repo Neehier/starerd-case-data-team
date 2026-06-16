@@ -8,9 +8,9 @@ deduped AS (
 
 cleaned AS (
     SELECT
-        {{ clean_email('user_email') }}             AS user_email,
+        {{ clean_email('user_email') }} AS user_email,
         full_name,
-        {{ clean_department('department') }}        AS department,
+        {{ clean_department('department') }} AS department,
         country
     FROM deduped
 )

@@ -8,7 +8,7 @@ users AS (
 
 SELECT
     survey.submission_id,
-    survey.timestamp,
+    survey.submitted_at,
     survey.user_email,
     survey.rating,
     survey.comment_text,
