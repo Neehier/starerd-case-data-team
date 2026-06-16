@@ -21,6 +21,8 @@ sources:
         columns:
           - name: user_email
             tests:
+              - unique:
+                  config: { severity: warn, store_failures: true }
               - not_null:
                   config: { severity: warn, store_failures: true }
           - name: country

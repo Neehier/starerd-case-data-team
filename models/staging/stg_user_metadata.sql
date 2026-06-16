@@ -3,7 +3,8 @@ WITH source AS (
 ),
 
 deduped AS (
-    SELECT DISTINCT * FROM source
+    SELECT DISTINCT ON (user_email) *
+    FROM source
 ),
 
 cleaned AS (
