@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install sqlfluff sqlfluff-templater-dbt dbt-duckdb
-      - run: sqlfluff lint models --dialect d
+      - run: sqlfluff lint models --dialect duckdb
