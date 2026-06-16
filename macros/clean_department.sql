@@ -1,3 +1,3 @@
-{% macro clean_email(column_name) %}
+{% macro clean_department(column_name) %}
     LOWER(TRIM({{ column_name }}))
 {% endmacro %}

@@ -1,0 +1,28 @@
+sources:
+  - name: raw
+    meta:
+      external_location: "data/{name}.csv"
+    tables:
+      - name: survey_results
+        columns:
+          - name: user_email
+            tests:
+              - not_null:
+                  config: { severity: warn, store_failures: true }
+          - name: rating
+            tests:
+              - not_null:
+                  config: { severity: warn, store_failures: true }
+              - accepted_values:
+                  values: ['1', '2', '3', '4', '5']
+                  config: { severity: warn, store_failures: true }
+      - name: user_metadata
+        columns:
+          - name: user_email
+            tests:
+              - not_null:
+                  config: { severity: warn, store_failures: true }
+          - name: country
+            tests:
+              - not_null:
+                  config: { severity: warn, store_failures: true }
