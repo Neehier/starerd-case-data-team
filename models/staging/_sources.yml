@@ -14,7 +14,8 @@ sources:
               - not_null:
                   config: { severity: warn, store_failures: true }
               - accepted_values:
-                  values: ['1', '2', '3', '4', '5']
+                  arguments:
+                    values: ['1', '2', '3', '4', '5']
                   config: { severity: warn, store_failures: true }
       - name: user_metadata
         columns:
