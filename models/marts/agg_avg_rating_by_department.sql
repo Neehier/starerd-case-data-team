@@ -4,4 +4,3 @@ SELECT
 FROM {{ ref('fct_survey_feedback') }}
 WHERE department IS NOT NULL
 GROUP BY department
-ORDER BY avg_rating DESC

@@ -4,4 +4,3 @@ SELECT
 FROM {{ ref('fct_survey_feedback') }}
 WHERE region IS NOT NULL
 GROUP BY region
-ORDER BY avg_rating DESC
