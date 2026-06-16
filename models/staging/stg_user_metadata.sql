@@ -9,13 +9,14 @@ deduped AS (
 cleaned AS (
     SELECT
         {{ clean_email('user_email') }}             AS user_email,
-        full_name                                   AS full_name,
+        full_name,
         {{ clean_department('department') }}        AS department,
-        country                                     AS country
+        country
     FROM deduped
 )
 
 SELECT *
 FROM cleaned
-WHERE user_email IS NOT NULL
-  AND country IS NOT NULL
+WHERE
+    user_email IS NOT NULL
+    AND country IS NOT NULL
