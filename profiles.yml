@@ -1,0 +1,6 @@
+starred_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: case.duckdb

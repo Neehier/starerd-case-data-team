@@ -1,0 +1,9 @@
+name: 'starred_case'
+profile: 'starred_profile'
+
+models:
+  starred_case:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
