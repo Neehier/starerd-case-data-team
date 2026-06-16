@@ -11,7 +11,7 @@ cleaned AS (
         submission_id,
         {{ clean_email('user_email') }} AS user_email,
         TRY_CAST(rating AS INTEGER) AS rating,
-        TRY_CAST("timestamp" AS TIMESTAMP) AS submitted_at,
+        TRY_CAST(timestamp AS TIMESTAMP) AS submitted_at,
         comment_text,
         region
     FROM deduped
