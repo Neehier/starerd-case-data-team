@@ -1,0 +1,13 @@
+models:
+  - name: fct_survey_feedback
+    columns:
+      - name: submission_id
+        tests: [unique, not_null]
+      - name: department
+        tests:
+          - not_null:
+              config: { severity: warn, store_failures: true }
+      - name: country
+        tests:
+          - not_null:
+              config: { severity: warn, store_failures: true }

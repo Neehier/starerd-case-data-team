@@ -1,0 +1,7 @@
+SELECT
+    region,
+    ROUND(AVG(rating), 2) AS avg_rating
+FROM {{ ref('fct_survey_feedback') }}
+WHERE region IS NOT NULL
+GROUP BY region
+ORDER BY avg_rating DESC
